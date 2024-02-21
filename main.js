@@ -74,6 +74,8 @@ function couponCheck() {
   if (couponCode === "COUPLE20") {
     totalTicketPrice = totalTicketPrice - parseInt(totalTicketPrice * 0.2);
     updateTicketPrice(totalTicketPrice);
+    let couponCodeSection = document.getElementById("couponCodeSection");
+    couponCodeSection.classList.add("hidden");
   }
   // let b = "...";
   // document.getElementById('couponID').value = b;
