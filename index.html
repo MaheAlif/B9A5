@@ -16,7 +16,7 @@
   <body>
     <header>
       <!-- Navbar -->
-      <div id="navbarSection" class=" navbar bg-base-100">
+      <div id="navbarSection" class="navbar bg-base-100">
         <div class="navbar-start">
           <!-- Navbar middle for mobile -->
           <div class="dropdown">
@@ -90,7 +90,7 @@
 
     <main class="lg:min-w-[1000px]">
       <!-- Hero section -->
-      <section id="heroSection" class="  lg:p-10 p-5 lg:min-w-[1000px]">
+      <section id="heroSection" class="lg:p-10 p-5 lg:min-w-[1000px]">
         <div
           class="hero min-h-[300px] lg:min-h-[550px] rounded-2xl"
           style="background-image: url(images/banner.png)"
@@ -124,7 +124,7 @@
                 <button
                   class="btn glass text-3xl font-semibold text-white hover:bg-green-800 bg-green-600 mb-5"
                 >
-                  Glass button
+                  <a href="#ticketSection">Buy ticket</a>
                 </button>
               </div>
             </div>
@@ -180,7 +180,7 @@
       </section>
 
       <!-- Coupon section -->
-      <section id="couponSection" class=" mt-32 flex flex-col gap-6 mb-28">
+      <section id="couponSection" class="mt-32 flex flex-col gap-6 mb-28">
         <h1 class="text-black text-3xl lg:text-5xl text-center font-bold">
           Best offers for you
         </h1>
@@ -198,7 +198,9 @@
       </section>
 
       <!-- Ticket Section -->
-      <section id="ticketSection" class=" flex flex-col justify-center mt-5 bg-[#F7F8F8] border border-t-7 border-lime-400 rounded-3xl"
+      <section
+        id="ticketSection"
+        class="flex flex-col justify-center mt-5 bg-[#F7F8F8] border border-t-7 border-lime-400 rounded-3xl"
       >
         <!-- 1st div -->
         <div>
@@ -218,7 +220,9 @@
         </div>
 
         <!-- 2nd div -->
-        <div class=" max-w-[1170px] mx-auto bg-gray-400 mt-10 rounded-2xl lg:p-10">
+        <div
+          class="max-w-[1170px] mx-auto bg-gray-400 mt-10 rounded-2xl lg:p-10"
+        >
           <!-- Destination config div -->
           <div class="flex shadow-xl rounded-xl bg-gray-100 mb-10">
             <!-- destination -->
@@ -297,190 +301,553 @@
 
             <!-- fare -->
             <div class="px-5 border-dashed border-l-2 border-green-500 pl-5">
-                <div class="flex flex-col justify-center items-center min-h-full">
-                    <div class="flex justify-center">
-                        <img src="images/fare.png" alt="">
-                    </div>
-                    <h1 class="text-5xl font-extrabold text-green-600 text-center"><span class="text-5xl font-extrabold text-black">500</span> taka</h1>
-                    <p class="text-3xl text-center font-normal">Per seat!</p>
+              <div class="flex flex-col justify-center items-center min-h-full">
+                <div class="flex justify-center">
+                  <img src="images/fare.png" alt="" />
                 </div>
+                <h1 class="text-5xl font-extrabold text-green-600 text-center">
+                  <span class="text-5xl font-extrabold text-black">500</span>
+                  taka
+                </h1>
+                <p class="text-3xl text-center font-normal">Per seat!</p>
+              </div>
             </div>
           </div>
 
           <!-- Ticketing div -->
-          <div class="flex shadow-xl rounded-xl p-5 gap-5 bg-gray-100 max-w-[1170px] border border-green-400">
+          <div
+            class="flex shadow-xl rounded-xl p-5 gap-5 bg-gray-100 max-w-[1170px] border border-green-400"
+          >
             <!-- Select seat -->
-            <div class="flex flex-col min-w-[600px] p-5 border border-purple-400">
+            <div
+              class="flex flex-col min-w-[600px] p-5 border border-purple-400"
+            >
+              <h1
+                class="text-gray-700 font-normal text-2xl p-3 border-dashed border-b border-gray-500"
+              >
+                Select your seat!
+              </h1>
 
-                <h1 class="text-gray-700 font-normal text-2xl p-3 border-dashed border-b border-gray-500">Select your seat!</h1>
+              <div
+                class="min-w-full flex justify-between p-3 border-dashed border-b border-gray-500"
+              >
+                <h1 class="text-gray-800 font-normal text-xl flex gap-1">
+                  <img src="images/seat-gray.png" alt="" /> available
+                </h1>
+                <h1 class="text-green-600 font-normal text-xl flex gap-1">
+                  <img src="images/seat-green-filled.png" alt="" /> selected
+                </h1>
+              </div>
+              <!-- bus map -->
+              <div>
+                <div class="flex justify-end p-3">
+                  <img
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] p-5"
+                    src="images/tabler-icon-steering-wheel.png"
+                    alt=""
+                  />
+                </div>
+              </div>
 
-                <div class="min-w-full flex justify-between p-3 border-dashed border-b border-gray-500">
-                    <h1 class="text-gray-800 font-normal text-xl flex gap-1"><img src="images/seat-gray.png" alt=""> available</h1>
-                    <h1 class="text-green-600 font-normal text-xl flex gap-1"><img src="images/seat-green-filled.png" alt=""> selected</h1>                 
-                </div>      
-                <!-- bus map -->
-                <div>
-                    <div class="flex justify-end p-3"><img class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] p-5" src="images/tabler-icon-steering-wheel.png" alt=""></div>
+              <!-- seat orientation -->
+              <div class="flex flex-col gap-5">
+                <!-- Row - A -->
+                <div class="flex gap-5">
+                  <p
+                    class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5"
+                  >
+                    A
+                  </p>
+                  <p
+                    onclick="seatSelection('A1')"
+                    id="A1"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    A1
+                  </p>
+                  <p
+                    onclick="seatSelection('A2')"
+                    id="A2"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    A2
+                  </p>
+                  <p
+                    onclick="seatSelection('A3')"
+                    id="A3"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14"
+                  >
+                    A3
+                  </p>
+                  <p
+                    onclick="seatSelection('A4')"
+                    id="A4"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    A4
+                  </p>
                 </div>
 
-                <!-- seat orientation -->
-                <div class="flex flex-col gap-5">
-                    <!-- Row - A -->
-                    <div class="flex gap-5">
-                        <p class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5">A</p>
-                        <p onclick="seatSelection('A1')" id="A1" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">A1</p>
-                        <p onclick="seatSelection('A2')" id="A2" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">A2</p>
-                        <p onclick="seatSelection('A3')" id="A3" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14">A3</p>
-                        <p onclick="seatSelection('A4')" id="A4" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">A4</p>
-                    </div>
-
-                    <!-- Row - B -->
-                    <div class="flex gap-5">
-                        <p class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5">B</p>
-                        <p onclick="seatSelection('B1')" id="B1" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">B1</p>
-                        <p onclick="seatSelection('B2')" id="B2" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">B2</p>
-                        <p onclick="seatSelection('B3')" id="B3" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14">B3</p>
-                        <p onclick="seatSelection('B4')" id="B4" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">B4</p>
-                    </div>
-
-                    <!-- Row - C -->
-                    <div class="flex gap-5">
-                        <p class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5">C</p>
-                        <p onclick="seatSelection('C1')" id="C1" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">C1</p>
-                        <p onclick="seatSelection('C2')" id="C2" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">C2</p>
-                        <p onclick="seatSelection('C3')" id="C3" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14">C3</p>
-                        <p onclick="seatSelection('C4')" id="C4" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">C4</p>
-                    </div>
-
-                    <!-- Row - D -->
-                    <div class="flex gap-5">
-                        <p class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5">D</p>
-                        <p onclick="seatSelection('D1')" id="D1" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">D1</p>
-                        <p onclick="seatSelection('D2')" id="D2" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">D2</p>
-                        <p onclick="seatSelection('D3')" id="D3" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14">D3</p>
-                        <p onclick="seatSelection('D4')" id="D4" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">D4</p>
-                    </div>
-
-                    <!-- Row - E -->
-                    <div class="flex gap-5">
-                        <p class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5">E</p>
-                        <p onclick="seatSelection('E1')" id="E1" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">E1</p>
-                        <p onclick="seatSelection('E2')" id="E2" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">E2</p>
-                        <p onclick="seatSelection('E3')" id="E3" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14">E3</p>
-                        <p onclick="seatSelection('E4')" id="E4" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">E4</p>
-                    </div>
-
-                    <!-- Row - F -->
-                    <div class="flex gap-5">
-                        <p class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5">F</p>
-                        <p onclick="seatSelection('F1')" id="F1" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">F1</p>
-                        <p onclick="seatSelection('F2')" id="F2" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">F2</p>
-                        <p onclick="seatSelection('F3')" id="F3" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14">F3</p>
-                        <p onclick="seatSelection('F4')" id="F4" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">F4</p>
-                    </div>
-
-                    <!-- Row - G -->
-                    <div class="flex gap-5">
-                        <p class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5">G</p>
-                        <p onclick="seatSelection('G1')" id="G1" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">G1</p>
-                        <p onclick="seatSelection('G2')" id="G2" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">G2</p>
-                        <p onclick="seatSelection('G3')" id="G3" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14">G3</p>
-                        <p onclick="seatSelection('G4')" id="G4" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">G4</p>
-                    </div>
-
-                    <!-- Row - H -->
-                    <div class="flex gap-5">
-                        <p class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5">H</p>
-                        <p onclick="seatSelection('H1')" id="H1" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">H1</p>
-                        <p onclick="seatSelection('H2')" id="H2" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">H2</p>
-                        <p onclick="seatSelection('H3')" id="H3" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14">H3</p>
-                        <p onclick="seatSelection('H4')" id="H4" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">H4</p>
-                    </div>
-
-                    <!-- Row - I -->
-                    <div class="flex gap-5">
-                        <p class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5">I</p>
-                        <p onclick="seatSelection('I1')" id="I1" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">I1</p>
-                        <p onclick="seatSelection('I2')" id="I2" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">I2</p>
-                        <p onclick="seatSelection('I3')" id="I3" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14">I3</p>
-                        <p onclick="seatSelection('I4')" id="I4" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">I4</p>
-                    </div>
-
-                    <!-- Row - J -->
-                    <div class="flex gap-5">
-                        <p class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5">J</p>
-                        <p onclick="seatSelection('J1')" id="J1" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">J1</p>
-                        <p onclick="seatSelection('J2')" id="J2" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">J2</p>
-                        <p onclick="seatSelection('J3')" id="J3" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14">J3</p>
-                        <p onclick="seatSelection('J4')" id="J4" class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm">J4</p>
-                    </div>
+                <!-- Row - B -->
+                <div class="flex gap-5">
+                  <p
+                    class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5"
+                  >
+                    B
+                  </p>
+                  <p
+                    onclick="seatSelection('B1')"
+                    id="B1"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    B1
+                  </p>
+                  <p
+                    onclick="seatSelection('B2')"
+                    id="B2"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    B2
+                  </p>
+                  <p
+                    onclick="seatSelection('B3')"
+                    id="B3"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14"
+                  >
+                    B3
+                  </p>
+                  <p
+                    onclick="seatSelection('B4')"
+                    id="B4"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    B4
+                  </p>
                 </div>
+
+                <!-- Row - C -->
+                <div class="flex gap-5">
+                  <p
+                    class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5"
+                  >
+                    C
+                  </p>
+                  <p
+                    onclick="seatSelection('C1')"
+                    id="C1"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    C1
+                  </p>
+                  <p
+                    onclick="seatSelection('C2')"
+                    id="C2"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    C2
+                  </p>
+                  <p
+                    onclick="seatSelection('C3')"
+                    id="C3"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14"
+                  >
+                    C3
+                  </p>
+                  <p
+                    onclick="seatSelection('C4')"
+                    id="C4"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    C4
+                  </p>
+                </div>
+
+                <!-- Row - D -->
+                <div class="flex gap-5">
+                  <p
+                    class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5"
+                  >
+                    D
+                  </p>
+                  <p
+                    onclick="seatSelection('D1')"
+                    id="D1"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    D1
+                  </p>
+                  <p
+                    onclick="seatSelection('D2')"
+                    id="D2"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    D2
+                  </p>
+                  <p
+                    onclick="seatSelection('D3')"
+                    id="D3"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14"
+                  >
+                    D3
+                  </p>
+                  <p
+                    onclick="seatSelection('D4')"
+                    id="D4"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    D4
+                  </p>
+                </div>
+
+                <!-- Row - E -->
+                <div class="flex gap-5">
+                  <p
+                    class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5"
+                  >
+                    E
+                  </p>
+                  <p
+                    onclick="seatSelection('E1')"
+                    id="E1"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    E1
+                  </p>
+                  <p
+                    onclick="seatSelection('E2')"
+                    id="E2"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    E2
+                  </p>
+                  <p
+                    onclick="seatSelection('E3')"
+                    id="E3"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14"
+                  >
+                    E3
+                  </p>
+                  <p
+                    onclick="seatSelection('E4')"
+                    id="E4"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    E4
+                  </p>
+                </div>
+
+                <!-- Row - F -->
+                <div class="flex gap-5">
+                  <p
+                    class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5"
+                  >
+                    F
+                  </p>
+                  <p
+                    onclick="seatSelection('F1')"
+                    id="F1"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    F1
+                  </p>
+                  <p
+                    onclick="seatSelection('F2')"
+                    id="F2"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    F2
+                  </p>
+                  <p
+                    onclick="seatSelection('F3')"
+                    id="F3"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14"
+                  >
+                    F3
+                  </p>
+                  <p
+                    onclick="seatSelection('F4')"
+                    id="F4"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    F4
+                  </p>
+                </div>
+
+                <!-- Row - G -->
+                <div class="flex gap-5">
+                  <p
+                    class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5"
+                  >
+                    G
+                  </p>
+                  <p
+                    onclick="seatSelection('G1')"
+                    id="G1"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    G1
+                  </p>
+                  <p
+                    onclick="seatSelection('G2')"
+                    id="G2"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    G2
+                  </p>
+                  <p
+                    onclick="seatSelection('G3')"
+                    id="G3"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14"
+                  >
+                    G3
+                  </p>
+                  <p
+                    onclick="seatSelection('G4')"
+                    id="G4"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    G4
+                  </p>
+                </div>
+
+                <!-- Row - H -->
+                <div class="flex gap-5">
+                  <p
+                    class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5"
+                  >
+                    H
+                  </p>
+                  <p
+                    onclick="seatSelection('H1')"
+                    id="H1"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    H1
+                  </p>
+                  <p
+                    onclick="seatSelection('H2')"
+                    id="H2"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    H2
+                  </p>
+                  <p
+                    onclick="seatSelection('H3')"
+                    id="H3"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14"
+                  >
+                    H3
+                  </p>
+                  <p
+                    onclick="seatSelection('H4')"
+                    id="H4"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    H4
+                  </p>
+                </div>
+
+                <!-- Row - I -->
+                <div class="flex gap-5">
+                  <p
+                    class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5"
+                  >
+                    I
+                  </p>
+                  <p
+                    onclick="seatSelection('I1')"
+                    id="I1"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    I1
+                  </p>
+                  <p
+                    onclick="seatSelection('I2')"
+                    id="I2"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    I2
+                  </p>
+                  <p
+                    onclick="seatSelection('I3')"
+                    id="I3"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14"
+                  >
+                    I3
+                  </p>
+                  <p
+                    onclick="seatSelection('I4')"
+                    id="I4"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    I4
+                  </p>
+                </div>
+
+                <!-- Row - J -->
+                <div class="flex gap-5">
+                  <p
+                    class="bg-slate-200 rounded-md min-w-[80px] min-h-[60px] p-5 text-black text-sm mr-5"
+                  >
+                    J
+                  </p>
+                  <p
+                    onclick="seatSelection('J1')"
+                    id="J1"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    J1
+                  </p>
+                  <p
+                    onclick="seatSelection('J2')"
+                    id="J2"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    J2
+                  </p>
+                  <p
+                    onclick="seatSelection('J3')"
+                    id="J3"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm ml-14"
+                  >
+                    J3
+                  </p>
+                  <p
+                    onclick="seatSelection('J4')"
+                    id="J4"
+                    class="bg-slate-400 rounded-md min-w-[80px] min-h-[60px] hover:bg-gray-700 hover:text-white p-5 text-black text-sm"
+                  >
+                    J4
+                  </p>
+                </div>
+              </div>
             </div>
 
             <!-- Payment -->
             <div class="min-w-[400px] p-5 border border-cyan-500">
-                <h1 class="text-gray-700 font-normal text-2xl p-3 border-dashed border-b border-gray-500">Select your seat!</h1>
+              <h1
+                class="text-gray-700 font-normal text-2xl p-3 border-dashed border-b border-gray-500"
+              >
+                Select your seat!
+              </h1>
 
-                <!-- Ticket show -->
-                <div class="border-solid mt-5 border-red-500 h-44 w-full mx-auto rounded-xl shadow-lg bg-[#eeeeee]">
-                    <table id="seatTable" class="w-full gap-2">
-                     <tr class="border-dashed border-b-2 border-gray-300 pb-3">
-                       <td class="px-5 font-raleway">Seat <span id="seatCount" class=" bg-green-400 rounded-full text-white shadow-lg p-1">0</span> </td>
-                       <td class="px-5 font-raleway">Class</td>
-                       <td class="px-5 font-raleway">Price</td>
-                     </tr>
-                   </table> 
-                </div>
+              <!-- Ticket show -->
+              <div
+                class="border-solid mt-5 border-red-500 h-44 w-full mx-auto rounded-xl shadow-lg bg-[#eeeeee]"
+              >
+                <table id="seatTable" class="w-full gap-2">
+                  <tr class="border-dashed border-b-2 border-gray-300 pb-3">
+                    <td class="px-5 font-raleway">
+                      Seat
+                      <span
+                        id="seatCount"
+                        class="bg-green-400 rounded-full text-white shadow-lg p-1"
+                        >0</span
+                      >
+                    </td>
+                    <td class="px-5 font-raleway">Class</td>
+                    <td class="px-5 font-raleway">Price</td>
+                  </tr>
+                </table>
+              </div>
 
-                <!-- Ticaket fare -->
-                <div class="flex justify-between">
-                    <h1 class="text-gray-700 font-normal text-2xl p-3 ">Total</h1>
-                    <h1 class="text-gray-700 font-normal text-2xl p-3 "> <span>1100</span> </h1>
-                </div>
+              <!-- Ticaket fare -->
+              <div class="flex justify-between">
+                <h1 class="text-gray-700 font-normal text-2xl p-3">Total</h1>
+                <h1 class="text-gray-700 font-normal text-2xl p-3">
+                  <span id="ticketFare">0</span>
+                </h1>
+              </div>
 
-                <!-- Coupon code apply -->
-                <div class="flex mt-5 gap-2">
-                    <input type="text" placeholder="Type your coupon code..." class="input input-bordered input-accent w-full max-w-xs" />
-                    <button class="btn btn-success">Success</button>
-                </div>
+              <!-- Coupon code apply -->
+              <div id="couponCodeSection" class="flex mt-5 gap-2">
+                <input
+                  id="couponID"
+                  type="text"
+                  placeholder="Type your coupon code..."
+                  class="input input-bordered input-accent w-full max-w-xs"
+                />
+                <button onclick="couponCheck()" class="btn btn-success">
+                  Apply
+                </button>
+              </div>
 
-                <!-- Passenger info -->
-                <div class="mt-5">
-                    <div class="flex min-h-full flex-col justify-center lg:px-5 w-full">
-                        
-                        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                          <form class="space-y-6" action="#" method="POST">
-                            <!-- Passenger name -->
-                            <div>
-                                <label for="passengerName" class="block text-sm font-medium leading-6 text-gray-900">Passenger name</label>
-                                <div class="mt-2">
-                                  <input id="text" name="passengerName" type="text" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                                </div>
-                            </div>
-
-                            <!-- Passenger number -->
-                            <div>
-                                <label for="passengerNumber" class="block text-sm font-medium leading-6 text-gray-900">Phone number</label>
-                                <div class="mt-2">
-                                  <input id="number" name="passengerNumber" type="number" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                                </div>
-                            </div>
-
-                            <!-- Passenger email -->
-                            <div>                           
-                              <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
-                              <div class="mt-2">
-                                <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                              </div>
-                            </div>
-                      
-                            <div>
-                              <button onclick="success()" type="submit" class="flex w-full justify-center rounded-md bg-[#1DD100] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Next</button>
-                            </div>
-                          </form>
+              <!-- Passenger info -->
+              <div class="mt-5">
+                <div
+                  class="flex min-h-full flex-col justify-center lg:px-5 w-full"
+                >
+                  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                    <form class="space-y-6" action="#" method="POST">
+                      <!-- Passenger name -->
+                      <div>
+                        <label
+                          for="passengerName"
+                          class="block text-sm font-medium leading-6 text-gray-900"
+                          >Passenger name</label
+                        >
+                        <div class="mt-2">
+                          <input
+                            id="text"
+                            name="passengerName"
+                            type="text"
+                            required
+                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          />
                         </div>
                       </div>
+
+                      <!-- Passenger number -->
+                      <div>
+                        <label
+                          for="passengerNumber"
+                          class="block text-sm font-medium leading-6 text-gray-900"
+                          >Phone number</label
+                        >
+                        <div class="mt-2">
+                          <input
+                            id="passengerPhoneNumber"
+                            name="passengerNumber"
+                            type="number"
+                            required
+                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Passenger email -->
+                      <div>
+                        <label
+                          for="email"
+                          class="block text-sm font-medium leading-6 text-gray-900"
+                          >Email address</label
+                        >
+                        <div class="mt-2">
+                          <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            required
+                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <button
+                          id="nextBtn"
+                          onclick="success()"
+                          type="submit"
+                          class="flex w-full justify-center rounded-md bg-[#1DD100] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        >
+                          Next
+                        </button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
@@ -488,17 +855,56 @@
 
       <!-- Mode section -->
       <section id="modeSection" class="hidden">
-        <div class=" min-h-svh flex items-center justify-center bg-slate-200">
-            <div class="flex flex-col justify-center items-center min-h-[400px] min-w-[400px] p-10 shadow-2xl rounded-xl">
-                <img src="images/success.png" alt="">
-                <p class="text-3xl font-normal text-gray-800 text-center"> <span class="text-green-400 text-4xl lg:text-7xl font-bold">Thank you</span> <br> for Booking Our Bus Seats. 
-                    We are working hard to find the <br> best service and deals for you. 
-                </p>
-                <p class="text-2xl font-light text-gray-900 text-center">Shortly you will find a confirmation in your email.</p>
-                <button onclick="buyAgain()" class="btn btn-outline btn-warning">Continue</button>
-            </div>
+        <div class="min-h-svh flex items-center justify-center bg-slate-200">
+          <div
+            class="flex flex-col justify-center items-center min-h-[400px] min-w-[400px] p-10 shadow-2xl rounded-xl"
+          >
+            <img src="images/success.png" alt="" />
+            <p class="text-3xl font-normal text-gray-800 text-center">
+              <span class="text-green-400 text-4xl lg:text-7xl font-bold"
+                >Thank you</span
+              >
+              <br />
+              for Booking Our Bus Seats. We are working hard to find the <br />
+              best service and deals for you.
+            </p>
+            <p class="text-2xl font-light text-gray-900 text-center">
+              Shortly you will find a confirmation in your email.
+            </p>
+            <button onclick="buyAgain()" class="btn btn-outline btn-warning">
+              Continue
+            </button>
+          </div>
         </div>
       </section>
+
+      <!-- Footer -->
+      <footer class="bg-black h-64">
+        <div class="flex justify-around">
+          <div class="ml-10 pt-10">
+            <h1 class="font-raleway text-white text-2xl">P Paribahan E-Ticket</h1>
+            <p class="mt-6 font-inter text-white text-sm">
+              Your best travel partner to give you and your family the most
+              comfortable journey
+            </p>
+          </div>
+          <div class="ml-10 pt-10">
+            <h1 class="font-raleway text-white text-xl">Download our app</h1>
+            <img src="images/playstore.png" alt="" />
+          </div>
+        </div>
+        <div class="border-dashed border-b border-white w-full mt-10"></div>
+        <div class="flex justify-around">
+          <p class="mt-14 font-inter text-white text-sm">
+            @all rights reserved, P-Ticket services limited.2024
+          </p>
+          <p class="mt-14 font-inter text-white text-sm">Terms & condition</p>
+          <p class="mt-14 font-inter text-white text-sm">Privacy policy</p>
+          <p class="mt-14 font-inter text-white text-sm">
+            Return & refund policy
+          </p>
+        </div>
+      </footer>
     </main>
 
     <script src="main.js"></script>
